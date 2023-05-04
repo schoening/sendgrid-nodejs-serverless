@@ -1,5 +1,6 @@
 'use strict';
-const axios = require('axios');
+const _axios = require('axios');
+const fetchAdapter = require('@haverstack/axios-fetch-adapter');
 const pkg = require('../../package.json');
 const {
   helpers: {
@@ -10,6 +11,10 @@ const {
     ResponseError,
   },
 } = require('@sendgrid/helpers');
+
+const axios = _axios.create({
+  adapter: fetchAdapter,
+});
 
 const API_KEY_PREFIX = 'SG.';
 const SENDGRID_BASE_URL = 'https://api.sendgrid.com/';
