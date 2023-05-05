@@ -22,7 +22,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "index.js",
+  "main": "index.ts",
   "engines": {
     "node": "6.* || 8.* || >=10.*"
   },
